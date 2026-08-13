@@ -197,6 +197,18 @@ export const SEED_APPLICATIONS: Application[] = [
     season: 'Summer 2027',
   },
   {
+    id: 'akuna-capital',
+    company: 'Akuna Capital',
+    role: 'Software Engineering Intern',
+    logo: '/logos/akunacapital.svg',
+    status: 'in_process',
+    appliedDate: COMPANY_DATE,
+    notes: 'Summer 2027 internship',
+    location: 'Chicago, IL',
+    kind: 'internship',
+    season: 'Summer 2027',
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
