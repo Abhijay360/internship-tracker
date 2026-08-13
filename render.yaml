@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: internship-tracker
+    runtime: static
+    plan: free
+    branch: main
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=300

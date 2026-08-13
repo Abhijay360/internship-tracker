@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#1A3A52"/>
+  <path d="M14 44V20h8l6 14 6-14h8v24h-6V30l-6 14h-4l-6-14v14h-6z" fill="#fff"/>
+  <text x="32" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="600" letter-spacing="1.5" fill="#7a9ab8">HRT</text>
+</svg>
