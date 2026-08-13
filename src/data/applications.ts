@@ -8,7 +8,7 @@ export const SEED_APPLICATIONS: Application[] = [
     id: 'tiktok',
     company: 'TikTok',
     role: 'Software Engineering Intern',
-    logo: '/logos/tiktok.svg',
+    logo: '/logos/tt.svg',
     status: 'in_process',
     appliedDate: COMPANY_DATE,
     notes: 'Summer 2027 SWE internship',
