@@ -53,6 +53,18 @@ export const SEED_APPLICATIONS: Application[] = [
     season: 'Summer 2027',
   },
   {
+    id: 'seo-career',
+    company: 'SEO Career',
+    role: 'Career Program Application',
+    logo: '/logos/seocareer.svg',
+    status: 'in_process',
+    appliedDate: COMPANY_DATE,
+    notes: 'Summer 2027 SEO Career program',
+    location: 'New York, NY',
+    kind: 'internship',
+    season: 'Summer 2027',
+  },
+  {
     id: 'general-mills',
     company: 'General Mills',
     role: 'Technology Intern',
