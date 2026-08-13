@@ -3,6 +3,7 @@ import { SEED_APPLICATIONS } from '../data/applications'
 import type { Application, ApplicationStatus } from '../types'
 
 const STORAGE_KEY = 'pipeline-applications-v2'
+const OBSOLETE_IDS = new Set(['akuna-capital'])
 
 function loadApplications(): Application[] {
   try {
@@ -23,7 +24,9 @@ function loadApplications(): Application[] {
     })
 
     const seedIds = new Set(SEED_APPLICATIONS.map((app) => app.id))
-    const extras = parsed.filter((app) => !seedIds.has(app.id))
+    const extras = parsed.filter(
+      (app) => !seedIds.has(app.id) && !OBSOLETE_IDS.has(app.id),
+    )
     return [...merged, ...extras]
   } catch {
     return SEED_APPLICATIONS
