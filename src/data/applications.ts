@@ -269,6 +269,18 @@ export const SEED_APPLICATIONS: Application[] = [
     season: 'Summer 2027',
   },
   {
+    id: 'cluely',
+    company: 'Cluely',
+    role: '5-Day Program — On-Site Beta Testing',
+    logo: '/logos/cluely.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-14',
+    notes: '5-day on-site beta testing program',
+    location: 'On-site',
+    kind: 'internship',
+    season: 'Summer 2027',
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
