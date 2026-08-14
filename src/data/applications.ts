@@ -257,6 +257,18 @@ export const SEED_APPLICATIONS: Application[] = [
     season: 'Summer 2027',
   },
   {
+    id: 'bloomberg',
+    company: 'Bloomberg',
+    role: 'Software Engineering Intern',
+    logo: '/logos/bloomberg.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-14',
+    notes: 'Summer 2027 internship',
+    location: 'New York, NY',
+    kind: 'internship',
+    season: 'Summer 2027',
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
