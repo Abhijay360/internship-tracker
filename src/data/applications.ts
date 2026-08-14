@@ -425,6 +425,23 @@ export const SEED_APPLICATIONS: Application[] = [
     ),
   },
   {
+    id: 'parkade',
+    company: 'Parkade',
+    role: 'Software Engineering Intern',
+    logo: '/logos/parkade.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-15',
+    notes: 'Summer 2027 internship',
+    location: 'San Francisco, CA',
+    kind: 'internship',
+    season: 'Summer 2027',
+    pay: pay(
+      'Not publicly listed',
+      'Parkade (parking automation startup) publishes full-time eng ranges, but no reliable public SWE intern hourly rates were found on Levels.fyi or job boards. Confirm pay directly if you get an offer.',
+      'Public search (Aug 2026) — parkade.com/jobs',
+    ),
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
