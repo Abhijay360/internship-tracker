@@ -1,7 +1,15 @@
-import type { Application } from '../types'
+import type { Application, PayInfo } from '../types'
 
 const COMPANY_DATE = '2026-08-13'
 const APPLE_DATE = '2026-07-16'
+
+/** Community / public estimates — not official offers. */
+const pay = (
+  summary: string,
+  details: string,
+  source: string,
+  extras: Partial<PayInfo> = {},
+): PayInfo => ({ summary, details, source, ...extras })
 
 export const SEED_APPLICATIONS: Application[] = [
   {
@@ -15,6 +23,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Los Angeles, CA',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$50–$60 / hr',
+      'US SWE intern reports on Levels.fyi commonly land in the mid-$40s to $60/hr. LA reports around ~$55–$58/hr; Bay Area often ~$45–$60/hr. Housing support varies by site.',
+      'Levels.fyi internship reports (2025–2026)',
+      { hourlyMin: 50, hourlyMax: 60 },
+    ),
   },
   {
     id: 'apple',
@@ -27,6 +41,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Cupertino, CA',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$49–$60 / hr',
+      'Cupertino / Sunnyvale undergrad SWE intern reports commonly ~$49–$55/hr, with some NYC / senior / graduate offers higher (~$60+). Housing stipend often reported separately (~$3k+/mo in Bay Area).',
+      'Levels.fyi internship reports (2025–2026)',
+      { hourlyMin: 49, hourlyMax: 60 },
+    ),
   },
   {
     id: 'roblox',
@@ -39,6 +59,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'San Mateo, CA',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$62 / hr',
+      'San Mateo SWE intern reports consistently around $62/hr (~$10.7k/mo). Housing stipend often ~$10k for the summer.',
+      'Levels.fyi internship reports (2025–2026)',
+      { hourlyMin: 62, hourlyMax: 62 },
+    ),
   },
   {
     id: 'grace-hopper',
@@ -51,6 +77,11 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Conference',
     kind: 'conference',
     season: 'Summer 2027',
+    pay: pay(
+      'Not paid',
+      'Conference / scholarship application — no hourly wage. Scholarships may cover registration or travel if awarded.',
+      'Program type',
+    ),
   },
   {
     id: 'seo-career',
@@ -63,6 +94,11 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'New York, NY',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      'Not publicly listed',
+      'No reliable public hourly rate found on Levels.fyi / major job boards for this program. Confirm directly with SEO Career if accepted.',
+      'Public search (Aug 2026)',
+    ),
   },
   {
     id: 'general-mills',
@@ -75,6 +111,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Minneapolis, MN',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$25–$35 / hr (est.)',
+      'Limited public SWE/tech intern datapoints. Typical large CPG / corporate tech intern ranges often land roughly mid-$20s to mid-$30s/hr in Midwest markets. Treat as a rough estimate until offer letter.',
+      'Industry range estimate — sparse public reports',
+      { hourlyMin: 25, hourlyMax: 35 },
+    ),
   },
   {
     id: 'ge',
@@ -87,6 +129,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Boston, MA',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$20–$30 / hr',
+      'GE Aerospace / digital tech postings often start ~$20–$24/hr and increase by completed undergrad year. Levels.fyi GE Aviation SWE intern reports around ~$24–$30/hr historically. Housing/relocation support sometimes offered.',
+      'GE job postings + Levels.fyi (GE Aviation)',
+      { hourlyMin: 20, hourlyMax: 30 },
+    ),
   },
   {
     id: 'pnc',
@@ -99,6 +147,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Pittsburgh, PA',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '$25.24–$42.07 / hr',
+      'PNC Technology Undergraduate Intern postings list this base hourly range; actual rate depends on location, year, and experience.',
+      'PNC Technology Intern job posting',
+      { hourlyMin: 25.24, hourlyMax: 42.07 },
+    ),
   },
   {
     id: 'bofa',
@@ -111,6 +165,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Charlotte, NC',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$41–$46 / hr',
+      'Charlotte tech intern reports around ~$41/hr; some Northeast sites closer to ~$45.50/hr. Housing stipend often reported separately.',
+      'Levels.fyi Bank of America SWE intern reports',
+      { hourlyMin: 41, hourlyMax: 46 },
+    ),
   },
   {
     id: 'citadel',
@@ -123,6 +183,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$112–$145 / hr',
+      'Official US SWE intern weekly base often posted around $4,500–$5,800/week (~$112–$145/hr). Sign-on bonus, housing stipend / corporate housing, and travel commonly reported on top.',
+      'Citadel job postings + Levels.fyi',
+      { hourlyMin: 112, hourlyMax: 145 },
+    ),
   },
   {
     id: 'citadel-securities',
@@ -135,6 +201,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$108–$133 / hr',
+      'Official US SWE intern weekly base often posted around $4,300–$4,800/week. Levels.fyi recent US reports around ~$122–$133/hr. Housing / sign-on frequently reported separately.',
+      'Citadel Securities job postings + Levels.fyi',
+      { hourlyMin: 108, hourlyMax: 133 },
+    ),
   },
   {
     id: 'chevron',
@@ -147,6 +219,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Houston, TX',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$42–$49 / hr',
+      'Houston SWE / IT intern reports around ~$42–$49/hr recently (Levels.fyi ~$48.46/hr for Summer 2025). Furnished housing sometimes listed in IT intern benefits.',
+      'Levels.fyi Chevron SWE intern reports',
+      { hourlyMin: 42, hourlyMax: 49 },
+    ),
   },
   {
     id: 'salesforce',
@@ -159,6 +237,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'San Francisco, CA',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$53–$60 / hr',
+      'SF SWE intern reports commonly ~$53–$60/hr. Housing stipends often large (community reports of ~$3.5k/mo or ~$10k lump housing).',
+      'Levels.fyi Salesforce SWE intern reports',
+      { hourlyMin: 53, hourlyMax: 60 },
+    ),
   },
   {
     id: 'imc',
@@ -171,6 +255,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$121 / hr',
+      'Chicago SWE intern reports around ~$121/hr. Corporate housing, relocation, and large sign-on bonuses (community reports up to ~$25k) sometimes included.',
+      'Levels.fyi IMC Trading SWE intern reports',
+      { hourlyMin: 121, hourlyMax: 121 },
+    ),
   },
   {
     id: 'hudson-river-trading',
@@ -183,6 +273,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'New York, NY',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$120–$145 / hr',
+      'NYC SWE / trading-tech intern reports commonly ~$120–$145/hr. Corporate housing, meals, and large sign-on bonuses frequently reported.',
+      'Levels.fyi Hudson River Trading internship reports',
+      { hourlyMin: 120, hourlyMax: 145 },
+    ),
   },
   {
     id: 'deshaw',
@@ -195,6 +291,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'New York, NY',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$127–$144 / hr',
+      'NYC SWE intern reports around ~$127/hr for undergrad/senior tracks; graduate / PhD reports higher (~$144+). Housing stipend (~$10k), sign-on (~$20k), and tech stipends commonly listed on Levels.fyi.',
+      'Levels.fyi D. E. Shaw SWE intern reports',
+      { hourlyMin: 127, hourlyMax: 144 },
+    ),
   },
   {
     id: 'akuna-platform',
@@ -207,6 +309,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$62–$75 / hr',
+      'Akuna SWE / platform intern tracks share similar pay bands. Official floor often cited ~$130k annualized (~$62.50/hr). Levels.fyi Chicago reports ~$62.50–$75/hr. Corporate housing / relocation commonly included.',
+      'Akuna careers / Extern summaries + Levels.fyi',
+      { hourlyMin: 62, hourlyMax: 75 },
+    ),
   },
   {
     id: 'akuna-csharp',
@@ -219,6 +327,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$62–$75 / hr',
+      'Same Akuna SWE intern band as other software tracks (~$130k annualized floor / ~$62.50–$75/hr community reports). Role track does not usually change the published floor.',
+      'Akuna careers / Levels.fyi SWE intern reports',
+      { hourlyMin: 62, hourlyMax: 75 },
+    ),
   },
   {
     id: 'akuna-cpp',
@@ -231,6 +345,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$62–$75 / hr',
+      'C++ SWE intern track typically follows Akuna’s SWE pay floor (~$130k annualized). Levels.fyi Chicago SWE reports ~$62.50–$75/hr.',
+      'Akuna careers / Levels.fyi SWE intern reports',
+      { hourlyMin: 62, hourlyMax: 75 },
+    ),
   },
   {
     id: 'akuna-fullstack',
@@ -243,6 +363,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$62–$75 / hr',
+      'Full Stack Web SWE intern track typically follows Akuna’s SWE pay floor (~$130k annualized). Levels.fyi Chicago SWE reports ~$62.50–$75/hr.',
+      'Akuna careers / Levels.fyi SWE intern reports',
+      { hourlyMin: 62, hourlyMax: 75 },
+    ),
   },
   {
     id: 'akuna-python',
@@ -255,6 +381,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$62–$75 / hr',
+      'Python SWE intern track typically follows Akuna’s SWE pay floor (~$130k annualized). Levels.fyi Chicago SWE reports ~$62.50–$75/hr.',
+      'Akuna careers / Levels.fyi SWE intern reports',
+      { hourlyMin: 62, hourlyMax: 75 },
+    ),
   },
   {
     id: 'bloomberg',
@@ -267,6 +399,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'New York, NY',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$47–$52 / hr',
+      'NYC SWE intern reports commonly ~$47–$52/hr. Housing stipend (~$3.7k/mo) and relocation (~$800–$2k) often reported separately.',
+      'Levels.fyi Bloomberg SWE intern reports',
+      { hourlyMin: 47, hourlyMax: 52 },
+    ),
   },
   {
     id: 'cluely',
@@ -279,6 +417,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'On-site',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '$500 total · ~$12.50 / hr',
+      '$500 for the full 5-day on-site beta testing program (~$100/day). Implied ~$12.50/hr if ~8-hour days.',
+      'You — confirmed for this Cluely program',
+      { flatAmount: 500, flatUnit: '5-day program', hourlyMin: 12.5, hourlyMax: 12.5 },
+    ),
   },
   {
     id: 'boeing',
@@ -291,6 +435,12 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Seattle, WA',
     kind: 'internship',
     season: 'Summer 2027',
+    pay: pay(
+      '~$30–$36 / hr',
+      '2025 undergrad SWE intern reports commonly ~$30–$36/hr depending on class year; master’s / PhD higher. Housing stipend often ~$1.5k/mo.',
+      'Community / recruiting guides summarizing Boeing 2025 rates',
+      { hourlyMin: 30, hourlyMax: 36 },
+    ),
   },
   {
     id: 'gatech',
@@ -303,6 +453,11 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Atlanta, GA',
     kind: 'transfer',
     season: 'Spring 2027',
+    pay: pay(
+      'Not paid',
+      'College transfer application — no internship wage.',
+      'Application type',
+    ),
   },
   {
     id: 'uw-madison',
@@ -315,6 +470,11 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'Madison, WI',
     kind: 'transfer',
     season: 'Spring 2027',
+    pay: pay(
+      'Not paid',
+      'College transfer application — no internship wage.',
+      'Application type',
+    ),
   },
   {
     id: 'umd',
@@ -327,5 +487,10 @@ export const SEED_APPLICATIONS: Application[] = [
     location: 'College Park, MD',
     kind: 'transfer',
     season: 'Spring 2027',
+    pay: pay(
+      'Not paid',
+      'College transfer application — no internship wage.',
+      'Application type',
+    ),
   },
 ]

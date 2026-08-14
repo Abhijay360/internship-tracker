@@ -95,7 +95,9 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Changes save automatically to your browser.</p>
+        <p>
+          Click a role for estimated hourly pay. Changes save automatically to your browser.
+        </p>
       </footer>
     </div>
   )

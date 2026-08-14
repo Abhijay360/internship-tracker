@@ -2,6 +2,20 @@ export type ApplicationStatus = 'in_process' | 'accepted' | 'rejected'
 
 export type ApplicationKind = 'internship' | 'transfer' | 'conference'
 
+export type PayInfo = {
+  /** Short label shown on the card / in the pay panel */
+  summary: string
+  /** Extra context: housing, bonuses, program structure */
+  details: string
+  /** Where the estimate came from */
+  source: string
+  hourlyMin?: number
+  hourlyMax?: number
+  /** Flat stipend / program fee when not hourly */
+  flatAmount?: number
+  flatUnit?: string
+}
+
 export type Application = {
   id: string
   company: string
@@ -13,6 +27,7 @@ export type Application = {
   location?: string
   kind: ApplicationKind
   season: string
+  pay?: PayInfo
 }
 
 export type StatusFilter = 'all' | ApplicationStatus

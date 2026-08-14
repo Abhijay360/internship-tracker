@@ -25,43 +25,76 @@ export function ApplicationCard({
   onNotesChange,
   onRemove,
 }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false)
+  const [notesOpen, setNotesOpen] = useState(false)
+  const [payOpen, setPayOpen] = useState(false)
   const [notes, setNotes] = useState(application.notes)
 
   const saveNotes = () => {
     onNotesChange(application.id, notes)
-    setExpanded(false)
+    setNotesOpen(false)
   }
+
+  const pay = application.pay
 
   return (
     <article
-      className={`app-card status-${application.status}`}
+      className={`app-card status-${application.status} ${payOpen ? 'pay-open' : ''}`}
       style={{ animationDelay: `${index * 60}ms` }}
     >
-      <div className="app-card-header">
-        <div className="app-logo-wrap">
-          <img
-            src={application.logo}
-            alt=""
-            className="app-logo"
-            loading="lazy"
-          />
-        </div>
-        <div className="app-meta">
-          <h3 className="app-company">{application.company}</h3>
-          <p className="app-role">{application.role}</p>
-          <p className="app-location">
-            <span className={`kind-chip kind-${application.kind}`}>
-              {KIND_LABELS[application.kind]}
+      <button
+        type="button"
+        className="app-card-hit"
+        onClick={() => setPayOpen((v) => !v)}
+        aria-expanded={payOpen}
+        aria-controls={`pay-${application.id}`}
+      >
+        <div className="app-card-header">
+          <div className="app-logo-wrap">
+            <img
+              src={application.logo}
+              alt=""
+              className="app-logo"
+              loading="lazy"
+            />
+          </div>
+          <div className="app-meta">
+            <h3 className="app-company">{application.company}</h3>
+            <p className="app-role">{application.role}</p>
+            <p className="app-location">
+              <span className={`kind-chip kind-${application.kind}`}>
+                {KIND_LABELS[application.kind]}
+              </span>
+              {application.season}
+              {application.location ? ` · ${application.location}` : ''}
+            </p>
+          </div>
+          <div className="app-header-right">
+            <span className={`status-badge status-${application.status}`}>
+              {STATUS_LABELS[application.status]}
             </span>
-            {application.season}
-            {application.location ? ` · ${application.location}` : ''}
+            {pay && (
+              <span className="pay-chip" title="Click for pay details">
+                {pay.summary}
+              </span>
+            )}
+          </div>
+        </div>
+      </button>
+
+      {payOpen && pay && (
+        <div className="pay-panel" id={`pay-${application.id}`}>
+          <div className="pay-panel-top">
+            <p className="pay-panel-label">Estimated pay</p>
+            <p className="pay-panel-summary">{pay.summary}</p>
+          </div>
+          <p className="pay-panel-details">{pay.details}</p>
+          <p className="pay-panel-source">Source: {pay.source}</p>
+          <p className="pay-panel-disclaimer">
+            Community / public estimates — not an official offer. Actual pay varies by
+            location, year, and team.
           </p>
         </div>
-        <span className={`status-badge status-${application.status}`}>
-          {STATUS_LABELS[application.status]}
-        </span>
-      </div>
+      )}
 
       <div className="app-card-body">
         <p className="app-date">Applied {formatDate(application.appliedDate)}</p>
@@ -85,13 +118,13 @@ export function ApplicationCard({
         <button
           type="button"
           className="notes-toggle"
-          onClick={() => setExpanded((v) => !v)}
-          aria-expanded={expanded}
+          onClick={() => setNotesOpen((v) => !v)}
+          aria-expanded={notesOpen}
         >
-          {expanded ? 'Hide notes' : application.notes ? 'Edit notes' : 'Add notes'}
+          {notesOpen ? 'Hide notes' : application.notes ? 'Edit notes' : 'Add notes'}
         </button>
 
-        {expanded && (
+        {notesOpen && (
           <div className="notes-panel">
             <textarea
               value={notes}
@@ -114,7 +147,7 @@ export function ApplicationCard({
           </div>
         )}
 
-        {!expanded && application.notes && (
+        {!notesOpen && application.notes && (
           <p className="app-notes-preview">{application.notes}</p>
         )}
       </div>
