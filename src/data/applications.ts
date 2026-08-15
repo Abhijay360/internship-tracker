@@ -460,6 +460,23 @@ export const SEED_APPLICATIONS: Application[] = [
     ),
   },
   {
+    id: 'quantiq',
+    company: 'Quantiq',
+    role: 'Software Developer Intern',
+    logo: '/logos/quantiq.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-15',
+    notes: 'Summer 2027 — Austin HFT derivatives trading',
+    location: 'Austin, TX',
+    kind: 'internship',
+    season: 'Summer 2027',
+    pay: pay(
+      'Not publicly listed',
+      'No intern hourly rate on the Greenhouse posting or Levels.fyi (empty Austin 2025 datapoint). Small HFT shop — confirm pay if you get an offer.',
+      'Greenhouse job posting + Levels.fyi Quantiq Partners intern page',
+    ),
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
