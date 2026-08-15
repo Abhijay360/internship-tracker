@@ -477,6 +477,23 @@ export const SEED_APPLICATIONS: Application[] = [
     ),
   },
   {
+    id: 'solx',
+    company: 'SOLX Holdings',
+    role: 'Software Engineer Intern',
+    logo: '/logos/solx.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-15',
+    notes: 'Summer 2027 — internal tools, dashboards, and manufacturing analytics',
+    location: 'Aguadilla, PR',
+    kind: 'internship',
+    season: 'Summer 2027',
+    pay: pay(
+      'Not publicly listed',
+      'Official intern posting does not list a rate. Solx (solar manufacturing, Puerto Rico) has no Levels.fyi intern datapoints. Confirm pay if you get an offer.',
+      'Teal / SOLX intern posting (Aug 2026)',
+    ),
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
