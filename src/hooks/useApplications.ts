@@ -3,7 +3,7 @@ import { SEED_APPLICATIONS } from '../data/applications'
 import type { Application, ApplicationStatus } from '../types'
 
 const STORAGE_KEY = 'pipeline-applications-v2'
-const OBSOLETE_IDS = new Set(['akuna-capital'])
+const OBSOLETE_IDS = new Set(['akuna-capital', 'akuna-csharp'])
 
 function loadApplications(): Application[] {
   try {
