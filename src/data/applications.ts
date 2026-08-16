@@ -654,6 +654,24 @@ export const SEED_APPLICATIONS: Application[] = [
     ),
   },
   {
+    id: 'openai-student-collective',
+    company: 'OpenAI',
+    role: 'Student Collective — Campus Lead',
+    logo: '/logos/openai.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-16',
+    notes:
+      'OpenAI Student Collective 2026–2027. Campus Lead: workshops, studio hours, showcase. ~4–6 hrs/week through June 2027.',
+    location: 'Amherst, MA',
+    kind: 'campus',
+    season: '2026–2027',
+    pay: pay(
+      'Stipend (amount not listed)',
+      'OpenAI pays a cash stipend each semester plus ChatGPT access, Codex credits, and event funding. The public page does not publish the stipend amount or an hourly rate. Commitment is about 4–6 hours per week from August 2026 through June 2027.',
+      'openai.com/student-collective',
+    ),
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
