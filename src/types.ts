@@ -1,6 +1,11 @@
 export type ApplicationStatus = 'in_process' | 'accepted' | 'rejected'
 
-export type ApplicationKind = 'internship' | 'transfer' | 'conference' | 'hackathon'
+export type ApplicationKind =
+  | 'internship'
+  | 'transfer'
+  | 'conference'
+  | 'hackathon'
+  | 'campus'
 
 export type PayInfo = {
   /** Short label shown on the card / in the pay panel */
@@ -44,6 +49,7 @@ export const KIND_LABELS: Record<ApplicationKind, string> = {
   transfer: 'Transfer',
   conference: 'Conference',
   hackathon: 'Hackathon',
+  campus: 'Campus',
 }
 
 export const STATUS_ORDER: ApplicationStatus[] = [
@@ -57,4 +63,5 @@ export const KIND_ORDER: ApplicationKind[] = [
   'transfer',
   'conference',
   'hackathon',
+  'campus',
 ]

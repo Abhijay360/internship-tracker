@@ -251,6 +251,11 @@ body {
   color: #fbbf24;
 }
 
+.kind-campus {
+  background: rgba(244, 114, 182, 0.14);
+  color: #f472b6;
+}
+
 .filter-tab {
   display: inline-flex;
   align-items: center;
