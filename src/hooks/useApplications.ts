@@ -19,7 +19,10 @@ function loadApplications(): Application[] {
       return {
         ...seed,
         status: saved.status,
-        notes: saved.notes,
+        notes:
+          saved.notes === 'Volunteer application' && seed.role === 'Hacker'
+            ? seed.notes
+            : saved.notes,
       }
     })
 
