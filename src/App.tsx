@@ -54,10 +54,10 @@ function App() {
       <div className="bg-glow bg-glow-b" aria-hidden="true" />
 
       <header className="hero">
-        <p className="hero-season">Summer internships · Spring transfers</p>
+        <p className="hero-season">Internships · transfers · hackathons</p>
         <h1 className="hero-title">Pipeline</h1>
         <p className="hero-sub">
-          Track internships, transfers, and conferences — in process, accepted, or rejected.
+          Track internships, transfers, conferences, and hackathons — in process, accepted, or rejected.
         </p>
       </header>
 

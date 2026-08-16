@@ -246,6 +246,11 @@ body {
   color: #c084fc;
 }
 
+.kind-hackathon {
+  background: rgba(251, 191, 36, 0.14);
+  color: #fbbf24;
+}
+
 .filter-tab {
   display: inline-flex;
   align-items: center;

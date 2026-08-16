@@ -112,6 +112,7 @@ export function AddApplicationForm({ onAdd }: AddApplicationFormProps) {
                   setKind(next)
                   if (next === 'transfer') setSeason('Spring 2027')
                   if (next === 'internship') setSeason('Summer 2027')
+                  if (next === 'hackathon') setSeason('2026–2027')
                 }}
               >
                 {KIND_ORDER.map((k) => (
