@@ -672,6 +672,23 @@ export const SEED_APPLICATIONS: Application[] = [
     ),
   },
   {
+    id: 'massai',
+    company: 'MassAI',
+    role: 'Officer',
+    logo: '/logos/massai.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-17',
+    notes: 'On-campus officer application — UMass Amherst AI/ML student org',
+    location: 'Amherst, MA',
+    kind: 'campus',
+    season: '2026–2027',
+    pay: pay(
+      'Not paid',
+      'On-campus student organization officer role. Typically unpaid (possible event perks). Confirm with MassAI if a stipend exists.',
+      'UMass MassAI student organization',
+    ),
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
