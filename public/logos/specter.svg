@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Specter Aerospace logo">
+  <rect width="128" height="128" rx="20" fill="#f8fafc" />
+  <path d="M64 16c-14 0-25 11-25 25v28h9V41c0-9 7-16 16-16s16 7 16 16v28h9V41c0-14-11-25-25-25z" fill="#4c3b78"/>
+  <path d="M40 79h48v8H40zM44 92h40v8H44z" fill="#2e224b"/>
+</svg>

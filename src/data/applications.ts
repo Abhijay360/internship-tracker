@@ -761,6 +761,23 @@ export const SEED_APPLICATIONS: Application[] = [
     ),
   },
   {
+    id: 'specter-aerospace',
+    company: 'Specter Aerospace',
+    role: 'Full Stack Developer Co-Op',
+    logo: '/logos/specter.svg',
+    status: 'in_process',
+    appliedDate: '2026-08-20',
+    notes: 'Spring 2027 co-op',
+    location: 'Boston, MA',
+    kind: 'internship',
+    season: 'Spring 2027',
+    pay: pay(
+      'Not publicly listed',
+      'No compensation details were visible in the application posting screenshot. Confirm compensation if you move forward in the process.',
+      'Specter Aerospace posting screenshot',
+    ),
+  },
+  {
     id: 'boeing',
     company: 'Boeing',
     role: 'Software Engineering Intern',
