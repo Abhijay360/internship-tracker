@@ -307,7 +307,7 @@ export const SEED_APPLICATIONS: Application[] = [
       '$3,500–$5,700 / week',
       'Posting lists anticipated weekly base salary range of $3,500 to $5,700 for New York and Chicago. This is approximately $87.50–$142.50/hr using a 40-hour work week.',
       'Tower Research Capital posting from your screenshot',
-      { weeklyMin: 3500, weeklyMax: 5700, hourlyMin: 87.5, hourlyMax: 142.5 },
+      { hourlyMin: 87.5, hourlyMax: 142.5 },
     ),
   },
   {
