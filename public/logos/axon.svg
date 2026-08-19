@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Axon logo">
+  <rect width="128" height="128" rx="20" fill="#0b0b0f"/>
+  <path d="M20 93 48 33h10l28 60h-10l-8-18H38l-8 18H20zm22-27h22L53 41z" fill="#fff"/>
+  <path d="M88 93V33h20c11 0 20 9 20 20s-9 20-20 20h-10v20H88zm10-30h10c6 0 10-4 10-10s-4-10-10-10h-10z" fill="#fff"/>
+</svg>
