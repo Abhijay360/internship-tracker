@@ -389,13 +389,14 @@ export const SEED_APPLICATIONS: Application[] = [
     logo: '/logos/akunacapital.svg',
     status: 'in_process',
     appliedDate: '2026-08-19',
-    notes: 'Programming interview completed',
+    notes:
+      'Programming interview completed. Illinois Equal Pay Act notice: minimum annualized base starts at $145,000; exact compensation may vary.',
     location: 'Chicago, IL',
     kind: 'internship',
     season: 'Summer 2027',
     pay: pay(
       '~$62–$75 / hr (est.)',
-      'Hardware intern compensation is not publicly listed. Closest public community estimates suggest Akuna SWE intern pay floors in the ~$62.5–$75/hr band; use as a rough H/W proxy until an offer is received.',
+      'Hardware intern compensation is not publicly listed. Closest public community estimates suggest Akuna SWE intern pay floors in the ~$62.5–$75/hr band; use as a rough H/W proxy until an offer is received. Illinois Equal Pay Act notice from the posting: minimum annualized base starts at $145,000 (about ~$69.7/hr if assuming 40h/week), with exact compensation varying by factors like experience and skill set.',
       'Akuna SWE intern community pay band (proxy for hardware)',
       { hourlyMin: 62, hourlyMax: 75 },
     ),
